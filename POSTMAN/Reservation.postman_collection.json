@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "9e036f37-8b4e-4260-87a1-db18c8caf2b2",
+		"name": "Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2083226"
+	},
+	"item": [
+		{
+			"name": "Exercice 1",
+			"item": [
+				{
+					"name": "healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}:{{port}}/api/reservation/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reservation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Créer un sinistre - 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sinistre\":{\r\n        \"codeSinistre\":\"101\",\r\n        \"libelleSinistre\":\"Libelle\",\r\n        \"detailSinistre\":\"detail\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/api/reservation/voiture/987654321/sinistre",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reservation",
+								"voiture",
+								"987654321",
+								"sinistre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Créer un sinistre - 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sinistre\":{\r\n        \"codeSinistre\":\"101\",\r\n        \"libelleSinistre\":\"Libelle\",\r\n        \"detailSinistre\":\"detail\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/api/reservation/voiture/123456789/sinistre",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reservation",
+								"voiture",
+								"123456789",
+								"sinistre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercice 4",
+			"item": [
+				{
+					"name": "Créer un sinistre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sinistre\":{\r\n        \"codeSinistre\":\"101\",\r\n        \"libelleSinistre\":\"Libelle\",\r\n        \"detailSinistre\":\"detail\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{server}}:{{port}}/api/reservation/voiture/123456789/sinistre",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reservation",
+								"voiture",
+								"123456789",
+								"sinistre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "SYS",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "_system",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "RESERVATION"
+		},
+		{
+			"path": "COMMANDE"
+		},
+		{
+			"path": "ESB"
+		}
+	],
+	"settings": {
+		"objectscript.conn.active": true
+	}
+}

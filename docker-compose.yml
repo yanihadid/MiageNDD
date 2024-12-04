@@ -1,0 +1,26 @@
+version: '3.6'
+services:
+  iris:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: --check-caps false
+    #networks:
+      #- network-ndd
+    ports: 
+      - 51773
+      - 52773:52773
+      - 53773
+    volumes:
+      - ~/iris.key:/usr/irissys/mgr/iris.key
+      - databases-ndd:/databases
+      - ./RESERVATION:/opt/iriscode/RESERVATION
+      - ./COMMANDE:/opt/iriscode/COMMANDE
+      - ./ESB:/opt/iriscode/ESB
+volumes:
+   databases-ndd:
+    external: true
+#networks:
+  #network-ndd:
+    #external: true
